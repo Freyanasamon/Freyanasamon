@@ -115,23 +115,6 @@ Open **NCI > Orchestration**: pipeline components with state, token budget and c
    (about an hour for chat-style resources without encryption); renewal and token refresh are NOT implemented here.
    Retention, privacy notice and works-council/GDPR review are yours to do before capturing colleagues' messages.
 
-## ⚠️ Known Limits
-- Not yet tested against live Teams, Graph, or a real LLM/embedding key: the webhook signature, Graph handshake and GAIK stub path are
-  unit-tested; the real calls are not.
-- Graph subscription and token renewal are not implemented.
-- Entity inventory, relations and firmware history are constants in `server.py` (stand-ins for CMDB / network inventory).
-- Rules fit this incident's wording (expert know-how: "rule of thumb", "always", "never", "in my experience" plus a known device); other wording relies on the GAIK curator.
-- No user authentication: the person menu (post-as) is a dropdown, not sign-in. Put real sign-in (Entra ID) or your SSO/reverse proxy in front before using it with real data.
-- Single process, SQLite. Typing indicators live in memory only.
-- Calendar, Calls and Files show sample content; only chats, channels and NCI are functional.
-- Finnish lemmatising needs libvoikko on your machine; without it NCI falls back to plain tokens.
-
-## 🛣️ Next Steps for Production
-- Graph DB or Postgres
-- CMDB sync
-- Graph token / subscription renewal
-- Real authN with source ACLs at retrieval
-
 ## 📁 Project Structure
 ```
 nci-tool/
