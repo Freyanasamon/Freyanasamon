@@ -1,0 +1,2 @@
+gaik[llm-anthropic,embedder,ranker,answer-generator,finnish-rag]>=0.8
+langchain-core
